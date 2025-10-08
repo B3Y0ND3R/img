@@ -58,6 +58,14 @@ se = np.ones((3, 3), np.uint8)
 m = cv2.erode(thresh, se)
 m = cv2.dilate(m, se)
 
+p = cv2.dilate(m, se)
+p = cv2.erode(p, se)
+
 plt.imshow(m, cmap='gray')
+plt.axis("off")
+plt.show()
+
+
+plt.imshow(p, cmap='gray')
 plt.axis("off")
 plt.show()
